@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Theme: Striking & Simple (default) ─── */
+/* Dark navy + cyan — developer-precise, high contrast */
+:root,
+html.theme-bert {
+  --bg:             #0B0C10;
+  --surface:        #1F2833;
+  --border:         #2d3e4e;
+  --text:           #C5C6C7;
+  --text-secondary: #8a9aaa;
+  --text-muted:     #506070;
+  --accent:         #66FCF1;
+  --accent-text:    #0B0C10;
+  --glass-bg:       rgba(31, 40, 51, 0.82);
+  --glass-border:   rgba(102, 252, 241, 0.12);
+  --blob1:          rgba(102, 252, 241, 0.14);
+  --blob2:          rgba(69, 162, 158, 0.18);
+  --shadow:         0 20px 60px -30px rgba(0, 0, 0, 0.65);
+}
+
+/* ─── Theme: Red & Lively ─── */
+/* Off-white + deep crimson — bold, confident */
+html.theme-culture {
+  --bg:             #E3E2DF;
+  --surface:        #ffffff;
+  --border:         #ccc8c2;
+  --text:           #1a1a1a;
+  --text-secondary: #4a3a3a;
+  --text-muted:     #9A1750;
+  --accent:         #9A1750;
+  --accent-text:    #f5f0eb;
+  --glass-bg:       rgba(255, 255, 255, 0.82);
+  --glass-border:   rgba(154, 23, 80, 0.14);
+  --blob1:          rgba(154, 23, 80, 0.07);
+  --blob2:          rgba(238, 76, 124, 0.05);
+  --shadow:         0 20px 60px -30px rgba(93, 0, 30, 0.22);
+}
+
+/* ─── Base ─── */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ─── Glass utility ─── */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
